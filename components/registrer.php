@@ -27,7 +27,8 @@
         <div class="input-field"><input   class="validate" placeholder="Username"></div>
        <div class="input-field"><input   class="validate" placeholder="E-mail"></div>
        <div class="input-field"><input type="password"  class="validate" placeholder="Password"></div>
-         <button class="second-button">Create</button>
+         <button class="second-button">Create</button><br>
+         <a href="../components/index.php">Back to Home</a></p>
         </div>
        </div>
 </body>

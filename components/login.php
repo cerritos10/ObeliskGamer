@@ -29,6 +29,7 @@
        <div class="input-field"><input type="password"  class="validate" placeholder="Password"></div>
          <button class="second-button">Sign in</button>
          <p>Don't have an account? <a href="../components/registrer.html">Sign Up</a></p>
+         <a href="../components/index.php">Back to Home</a></p>
         </div>
         
        </div>
