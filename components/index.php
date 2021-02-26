@@ -37,7 +37,7 @@
               <a class="nav-link tam-nav" href="../components/registrer.php">Registrate</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link tam-nav" href="login.html">Inicia Sesion</a>
+              <a class="nav-link tam-nav" href="../components/login.php">Inicia Sesion</a>
             </li>
           </ul>
         </div>

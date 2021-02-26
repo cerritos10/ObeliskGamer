@@ -13,7 +13,7 @@
             <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
               <div class="site-logo">
                 <!--<a href="tienda.php" class="js-logo-clone">Mi Tienda</a>-->
-                <img  src="../assets/images/logo.png" alt="logo" style="width:85px; height:85px; padding:0px">
+               <a href="../components/index.php"><img  src="../assets/images/logo.png" alt="logo" style="width:85px; height:85px; padding:0px"></a>
               </div>
             </div>
 

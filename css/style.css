@@ -4,7 +4,8 @@ body {
   color: #8c92a0;
   font-weight: 300;
   font-size: 16px;
-  background: #1d2323; }
+  background: #1d2323; 
+  overflow-x: hidden;}
 
 ::-moz-selection {
   background: #000;
@@ -719,7 +720,7 @@ a {
     height: 40px;
     line-height: 40px;
     border-radius: 50%;
-    border: 1px solid #ccc; }
+    border: 2px solid #ccc; }
   .site-block-27 ul li.active a, .site-block-27 ul li.active span {
     background-image: linear-gradient(45deg,#4dff03,#18a705d3 70%);;
     color: #fff;
@@ -786,4 +787,21 @@ a {
   border-radius: 50%;
   margin-bottom: 20px; }
 
+  /**ScrollBarr*/
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(transparent,#30ff00);
+}
+::-webkit-scrollbar-thumb:hover{
+  background: linear-gradient(transparent,#f37121);
+}
+
+
   /** Estilos a parte*/
+
+  .pie{
+    margin-top: 40%;
+  }
