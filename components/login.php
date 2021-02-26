@@ -22,7 +22,6 @@
 </head>
 <body>
     <div class="popup" >
-    <?php include("../layouts/header.php"); ?> 
         <div class="content">
 
      <h1 class="sign-in">Log In</h1> 
@@ -35,7 +34,6 @@
        </div>
 </body>
 <div class="pie">
-<?php include("../layouts/footer.php"); ?> 
 </div>
 
 </html>
