@@ -35,11 +35,11 @@
 
             <div class="row">
               <div class="col-md-12 mb-5">
-                <div class="float-md-left mb-4"><h2 class="text-black h5">Shop All</h2></div>
+                <div class="float-md-left mb-4"><h2 class="text-black h5">Productos</h2></div>
                 <div class="d-flex">
                   <div class="dropdown mr-1 ml-md-auto">
                     <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Latest
+                      Ultimos
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
                       <a class="dropdown-item" href="#">fff</a>
@@ -59,7 +59,7 @@
                   </figure>
                   <div class="block-4-text p-4">
                     <h3><a href="shop-single.php">Tank Top</a></h3>
-                    <p class="mb-0">Finding perfect t-shirt</p>
+                    <p class="mb-0">Finding perfect</p>
                     <p class="text-primary font-weight-bold">$50</p>
                   </div>
                 </div>
@@ -87,17 +87,17 @@
 
           <div class="col-md-3 order-1 mb-5 mb-md-0">
             <div class=" border p-4 rounded mb-4">
-              <h3 class="mb-3 h6 text-uppercase texto_indicadores d-block">Principals</h3>
+              <h3 class="mb-3 h6 text-uppercase texto_indicadores d-block">Principales</h3>
               <ul class="texto_filtros list-unstyled mb-0">
-                <li class="mb-1"><a href="#" class="d-flex"><span>Computers</span> </a></li>
-                <li class="mb-1"><a href="#" class="d-flex"><span>Storage</span> </a></li>
-                <li class="mb-1"><a href="#" class="d-flex"><span>Peripherals</span></a></li>
+                <li class="mb-1"><a href="#" class="d-flex"><span>Computadoras</span> </a></li>
+                <li class="mb-1"><a href="#" class="d-flex"><span>Discos Duros</span> </a></li>
+                <li class="mb-1"><a href="#" class="d-flex"><span>Perifericos</span></a></li>
               </ul>
             </div>
 
             <div class="border p-4 rounded mb-4">
               <div class="mb-4">
-                <h3 class="mb-3 h6 text-uppercase texto_indicadores d-block">Filter by Price</h3>
+                <h3 class="mb-3 h6 text-uppercase texto_indicadores d-block">Filtrar por precio</h3>
                 <div id="slider-range" class="border-primary"></div>
                 <input type="text" name="text" id="amount" class="form-control border-0 pl-0" disabled="" />
               </div>
@@ -130,7 +130,7 @@
                 <div id="Oficina">
                   <p class="texto_filtros">
                     <a  data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample">
-                      Office
+                      Oficina
                     </a>
                   </p>
                   <div class="collapse" id="collapseExample1">
@@ -156,7 +156,7 @@
                 <div id="Redes">
                   <p class="texto_filtros">
                     <a  data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample">
-                    Networks
+                    Redes
                     </a>
                   </p>
                   <div class="collapse" id="collapseExample2">
@@ -187,7 +187,7 @@
             <div class="site-section site-blocks-2">
                 <div class="row justify-content-center text-center mb-5">
                   <div class="col-md-7 site-section-heading pt-4">
-                    <h2>Categories</h2>
+                    <h2>Categorias</h2>
                   </div>
                 </div>
                 <div class="row border-">
@@ -197,8 +197,8 @@
                         <img src="../assets/images/razer-v-m.jpg" alt="" class="img-fluid">
                       </figure>
                       <div class="text">
-                        <span class="text-uppercase">Collections</span>
-                        <h3>Peripherals</h3>
+                        <span class="text-uppercase">Collecciones</span>
+                        <h3>Perifericos</h3>
                       </div>
                     </a>
                   </div>
@@ -208,8 +208,8 @@
                         <img src="../assets/images/carou3.jpg" alt="" class="img-fluid">
                       </figure>
                       <div class="text">
-                        <span class="text-uppercase">Collections</span>
-                        <h3>Monitors</h3>
+                        <span class="text-uppercase">Collecciones</span>
+                        <h3>Monitores</h3>
                       </div>
                     </a>
                   </div>
@@ -219,8 +219,8 @@
                         <img src="../assets/images/carou6.jpg" alt="" class="img-fluid">
                       </figure>
                       <div class="text">
-                        <span class="text-uppercase">Collections</span>
-                        <h3>Led lights</h3>
+                        <span class="text-uppercase">Collecciones</span>
+                        <h3>Luces LED</h3>
                       </div>
                     </a>
                   </div>

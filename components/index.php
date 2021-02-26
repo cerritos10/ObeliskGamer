@@ -194,10 +194,10 @@
             <h4>Siguenos</h4>
             <div class="social-links">
               <ul>
-                <a href="https://www.facebook.com/">
+                <a href="https://www.facebook.com/ObeliskGamer-105005124978084">
                   <li class="facebook"><i class="fab fa-facebook-f"></i></li>
                 </a>
-                <a href="https://www.instagram.com/">
+                <a href="https://www.instagram.com/ObeliskGamer/">
                   <li class="instagram"><i class="fab fa-instagram"></i></li>
                 </a>
                 <a href="https://www.youtube.com/">

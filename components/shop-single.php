@@ -4,15 +4,17 @@
     <title>Tienda</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
-
+    <link rel="stylesheet" href="../fonts/icomoon/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/magnific-popup.css">
     <link rel="stylesheet" href="../css/jquery-ui.css">
     <link rel="stylesheet" href="../css/owl.carousel.min.css">
     <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+
+    <link href="../css/tienda.css" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/aos.css">
 
     <link rel="stylesheet" href="../css/style.css">
@@ -27,27 +29,13 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <img src="../images/cloth_1.jpg" alt="Image" class="img-fluid">
+            <img src="../assets/images/razer-v-m.jpg" alt="Image" class="img-fluid">
           </div>
           <div class="col-md-6">
-            <h2 class="text-black">Tank Top T-Shirt</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, vitae, explicabo? Incidunt facere, natus soluta dolores iusto! Molestiae expedita veritatis nesciunt doloremque sint asperiores fuga voluptas, distinctio, aperiam, ratione dolore.</p>
-            <p class="mb-4">Ex numquam veritatis debitis minima quo error quam eos dolorum quidem perferendis. Quos repellat dignissimos minus, eveniet nam voluptatibus molestias omnis reiciendis perspiciatis illum hic magni iste, velit aperiam quis.</p>
+            <h2 class="text-black">Rizer Viper Mini</h2>
+            <p>Nacido para superar los límites de los juegos ultraligeros, el Razer Viper Mini adopta una forma más pequeña que sigue siendo igual de grande en rendimiento. </p>
+            <p class="mb-4">Acortando su longitud y ancho de agarre, hemos trabajado con entusiastas y atletas de deportes electrónicos para perfeccionar su diseño aún más, asegurando que el control absoluto ahora esté en manos de más jugadores, así que tome nuestro mouse para juegos más delgado y liviano hasta ahora.</p>
             <p><strong class="text-primary h4">$50.00</strong></p>
-            <div class="mb-1 d-flex">
-              <label for="option-sm" class="d-flex mr-3 mb-3">
-                <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-sm" name="shop-sizes"></span> <span class="d-inline-block text-black">Small</span>
-              </label>
-              <label for="option-md" class="d-flex mr-3 mb-3">
-                <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-md" name="shop-sizes"></span> <span class="d-inline-block text-black">Medium</span>
-              </label>
-              <label for="option-lg" class="d-flex mr-3 mb-3">
-                <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-lg" name="shop-sizes"></span> <span class="d-inline-block text-black">Large</span>
-              </label>
-              <label for="option-xl" class="d-flex mr-3 mb-3">
-                <span class="d-inline-block mr-2" style="top:-2px; position: relative;"><input type="radio" id="option-xl" name="shop-sizes"></span> <span class="d-inline-block text-black"> Extra Large</span>
-              </label>
-            </div>
             <div class="mb-5">
               <div class="input-group mb-3" style="max-width: 120px;">
               <div class="input-group-prepend">
@@ -60,18 +48,18 @@
             </div>
 
             </div>
-            <p><a href="../components/cart.php" class="buy-now btn btn-sm btn-primary">Add To Cart</a></p>
+            <p><a href="../components/cart.php" class="buy-now btn btn-sm btn-primary">Añadir al carrito</a></p>
 
           </div>
         </div>
       </div>
     </div>
 
-    <div class="site-section block-3 site-blocks-2 bg-light">
+    <div class="site-section block-3 site-blocks-2 girar">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-7 site-section-heading text-center pt-4">
-            <h2>Featured Products</h2>
+            <h2>Productos Destacados</h2>
           </div>
         </div>
         <div class="row">
@@ -80,7 +68,7 @@
               <div class="item">
                 <div class="block-4 text-center">
                   <figure class="block-4-image">
-                    <img src="../images/cloth_1.jpg" alt="Image placeholder" class="img-fluid">
+                    <img src="../assets/images/razer-v-m.jpg" alt="Image placeholder" class="img-fluid">
                   </figure>
                   <div class="block-4-text p-4">
                     <h3><a href="#">Tank Top</a></h3>
@@ -92,7 +80,7 @@
               <div class="item">
                 <div class="block-4 text-center">
                   <figure class="block-4-image">
-                    <img src="../images/shoe_1.jpg" alt="Image placeholder" class="img-fluid">
+                    <img src="../assets/images/carou2.jpg" alt="Image placeholder" class="img-fluid">
                   </figure>
                   <div class="block-4-text p-4">
                     <h3><a href="#">Corater</a></h3>
@@ -104,7 +92,7 @@
               <div class="item">
                 <div class="block-4 text-center">
                   <figure class="block-4-image">
-                    <img src="../images/cloth_2.jpg" alt="Image placeholder" class="img-fluid">
+                    <img src="../assets/images/carou3.jpg" alt="Image placeholder" class="img-fluid">
                   </figure>
                   <div class="block-4-text p-4">
                     <h3><a href="#">Polo Shirt</a></h3>
@@ -116,7 +104,7 @@
               <div class="item">
                 <div class="block-4 text-center">
                   <figure class="block-4-image">
-                    <img src="../images/cloth_3.jpg" alt="Image placeholder" class="img-fluid">
+                    <img src="../assets/images/carou4.jpg" alt="Image placeholder" class="img-fluid">
                   </figure>
                   <div class="block-4-text p-4">
                     <h3><a href="#">T-Shirt Mockup</a></h3>
@@ -128,7 +116,7 @@
               <div class="item">
                 <div class="block-4 text-center">
                   <figure class="block-4-image">
-                    <img src="../images/shoe_1.jpg" alt="Image placeholder" class="img-fluid">
+                    <img src="../assets/images/carou5.jpg" alt="Image placeholder" class="img-fluid">
                   </figure>
                   <div class="block-4-text p-4">
                     <h3><a href="#">Corater</a></h3>

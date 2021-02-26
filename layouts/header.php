@@ -44,13 +44,12 @@
             
             </li>
             <li>
-              <a href="about.php">About</a>
+              <a href="about.php">Sobre nosotros</a>
             
             </li>
           
-            <li><a href="#">Catalogue</a></li>
-            <li><a href="#">New Arrivals</a></li>
-            <li><a href="contact.php">Contact</a></li>
+            <li><a href="#">Recién llegados</a></li>
+            <li><a href="contact.php">Contacto</a></li>
           </ul>
         </div>
       </nav>

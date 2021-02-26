@@ -46,8 +46,8 @@
                     <p>(503) 7698-0896</p>
                 </div>
                 <div class="redes-s">
-                    <a href="https://www.facebook.com/"><i class="icono facebook fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/"><i class="icono instagram fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/ObeliskGamer-105005124978084"><i class="icono facebook fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/ObeliskGamer/"><i class="icono instagram fab fa-instagram"></i></a>
                     <a href="https://www.youtube.com/"><i class="icono youtube fab fa-youtube"></i></a>
                     <a href="https://www.twitter.com/"><i class="icono twitter fab fa-twitter"></i></a>
                 </div>
