@@ -1,0 +1,26 @@
+.texto_filtros a,label{
+    color: #f37121;
+    font-weight: 430;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    /**text-shadow: 10px 10px 25px #272ae2,
+              -10px -10px 25px #272ae2*/
+
+}
+.texto_indicadores{
+    color: #f37121;
+    font-weight: 490 ;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 10px 10px 25px #f37121,
+              -10px -10px 25px #f37121
+
+}
+
+.texto_principales{
+    color: red;
+    font-family: 'Roboto', sans-serif;
+}
+.border-categories{
+    border: 3px solid #3de227;
+}
