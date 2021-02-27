@@ -163,9 +163,9 @@
           <div class="footer-col">
             <h4>Contactanos</h4>
             <ul>
-              <li><a href="#">7397-4576</a></li>
+              <li><a href="https://api.whatsapp.com/send?phone=50364302812&text=Me">7397-4576</a></li>
               <li><a href="#">2476-0967</a></li>
-              <li><a href="#">obeliskgamer@gmail.com</a></li>
+              <li><a href="mailto:luchetto.hatake@gmail.com">obeliskgamer@gmail.com</a></li>
               <li><a href="#">Cadelaria de la frontera</a></li>
             </ul>
           </div>

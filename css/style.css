@@ -96,7 +96,8 @@ a {
 .form-control {
   height: 43px;
   width: 70%;
-  background: #1d2323; }
+  background: #1d2323; 
+  color: #f37121;}
 .form-shadow{
   box-shadow: 5px 5px 15px #3de227,
               -5px -5px 15px #3de227
@@ -835,5 +836,20 @@ a {
 }
 .girar{
   background: rgb(46, 45, 45);
+}
+.color_detalle p{
+  color: #fff;
+}
+.tamaño{
+  width: 95%;
+    margin-right: 20px;
+}
+.tamaño-detalle{
+  max-width: 100%;
+    height: 288px;
+}
+.tamaño-destacado{
+  max-width: 100%;
+    height: 300px;
 }
 

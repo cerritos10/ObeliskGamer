@@ -29,12 +29,12 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <img src="../assets/images/razer-v-m.jpg" alt="Image" class="img-fluid">
+            <img src="../assets/images/razer-v-m.jpg" alt="Image" class=" tamaño-detalle">
           </div>
           <div class="col-md-6">
             <h2 class="text-black">Rizer Viper Mini</h2>
-            <p>Nacido para superar los límites de los juegos ultraligeros, el Razer Viper Mini adopta una forma más pequeña que sigue siendo igual de grande en rendimiento. </p>
-            <p class="mb-4">Acortando su longitud y ancho de agarre, hemos trabajado con entusiastas y atletas de deportes electrónicos para perfeccionar su diseño aún más, asegurando que el control absoluto ahora esté en manos de más jugadores, así que tome nuestro mouse para juegos más delgado y liviano hasta ahora.</p>
+            <p class="color_detalle">Nacido para superar los límites de los juegos ultraligeros, el Razer Viper Mini adopta una forma más pequeña que sigue siendo igual de grande en rendimiento. </p>
+            <p class="mb-4 color_detalle">Acortando su longitud y ancho de agarre, hemos trabajado con entusiastas y atletas de deportes electrónicos para perfeccionar su diseño aún más, asegurando que el control absoluto ahora esté en manos de más jugadores, así que tome nuestro mouse para juegos más delgado y liviano hasta ahora.</p>
             <p><strong class="text-primary h4">$50.00</strong></p>
             <div class="mb-5">
               <div class="input-group mb-3" style="max-width: 120px;">
@@ -62,13 +62,13 @@
             <h2>Productos Destacados</h2>
           </div>
         </div>
-        <div class="row">
+        <div class="row tamaño">
           <div class="col-md-12">
             <div class="nonloop-block-3 owl-carousel">
               <div class="item">
                 <div class="block-4 text-center">
                   <figure class="block-4-image">
-                    <img src="../assets/images/razer-v-m.jpg" alt="Image placeholder" class="img-fluid">
+                    <img src="../assets/images/razer-v-m.jpg" alt="Image placeholder" class="tamaño-destacado">
                   </figure>
                   <div class="block-4-text p-4">
                     <h3><a href="#">Tank Top</a></h3>
@@ -80,7 +80,7 @@
               <div class="item">
                 <div class="block-4 text-center">
                   <figure class="block-4-image">
-                    <img src="../assets/images/carou2.jpg" alt="Image placeholder" class="img-fluid">
+                    <img src="../assets/images/carou2.jpg" alt="Image placeholder" class="tamaño-destacado">
                   </figure>
                   <div class="block-4-text p-4">
                     <h3><a href="#">Corater</a></h3>
@@ -92,7 +92,7 @@
               <div class="item">
                 <div class="block-4 text-center">
                   <figure class="block-4-image">
-                    <img src="../assets/images/carou3.jpg" alt="Image placeholder" class="img-fluid">
+                    <img src="../assets/images/carou3.jpg" alt="Image placeholder" class="tamaño-destacado">
                   </figure>
                   <div class="block-4-text p-4">
                     <h3><a href="#">Polo Shirt</a></h3>
@@ -104,7 +104,7 @@
               <div class="item">
                 <div class="block-4 text-center">
                   <figure class="block-4-image">
-                    <img src="../assets/images/carou4.jpg" alt="Image placeholder" class="img-fluid">
+                    <img src="../assets/images/carou4.jpg" alt="Image placeholder" class="tamaño-destacado">
                   </figure>
                   <div class="block-4-text p-4">
                     <h3><a href="#">T-Shirt Mockup</a></h3>
@@ -116,7 +116,7 @@
               <div class="item">
                 <div class="block-4 text-center">
                   <figure class="block-4-image">
-                    <img src="../assets/images/carou5.jpg" alt="Image placeholder" class="img-fluid">
+                    <img src="../assets/images/carou5.jpg" alt="Image placeholder" class="tamaño-destacado">
                   </figure>
                   <div class="block-4-text p-4">
                     <h3><a href="#">Corater</a></h3>

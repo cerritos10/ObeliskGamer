@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="../css/aos.css">
 
     <link rel="stylesheet" href="../css/style.css">
-
+    
     
   </head>
   <body>
@@ -52,21 +52,25 @@
             </div>
             <div class="row mb-5">
 
-              <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up">
-                <div class="block-4 text-center border-product">
-                  <figure class="block-4-image">
-                    <a href="../components/shop-single.php"><img src="../assets/images/razer-v-m.jpg" alt="Image placeholder" class="img-fluid"></a>
-                  </figure>
-                  <div class="block-4-text p-4">
-                    <h3><a href="shop-single.php">Tank Top</a></h3>
-                    <p class="mb-0">Finding perfect</p>
-                    <p class="text-primary font-weight-bold">$50</p>
-                  </div>
-                </div>
-              </div>
+            <?php
+              include('../php/conexion.php');
+              $resultado = $conexion -> query("SELECT * FROM productos INNER JOIN categorias ON productos.id_categoria = categorias.id_categoria")or die($conexion -> error);
+              while($fila = mysqli_fetch_array($resultado)){
+            ?>
             
-
-
+              <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up" >
+                  <div class="block-4 text-center border-product">
+                    <figure class="block-4-image">
+                      <a href="../components/shop-single.php"><img src="../assets/images/<?php echo $fila['imagen'];?>" alt="Image placeholder" class="img-fluid"></a>
+                    </figure>
+                    <div class="block-4-text p-4">
+                      <h3><a href="shop-single.php"><?php echo $fila['nombre'];?></a></h3>
+                      <p class="mb-0"><?php echo $fila['categoria'];?></p>
+                      <p class="text-primary font-weight-bold">$<?php echo $fila['precio'];?></p>
+                    </div>
+                  </div>
+               </div>
+            <?php } ?>
             </div>
             <div class="row" data-aos="fade-up">
               <div class="col-md-12 text-center">
@@ -247,6 +251,15 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
   <script src="../js/main.js"></script>
-    
+  <script type="text/javascript">
+  window.addEventListener("load",function(){
+    var template = document.getElementById("multiplicar");               
+                for(var i = 1; i <= 2;i++){
+                  var clonar = template.cloneNode(true);
+                  template.appendChild(clonar)
+                }
+  });
+                
+              </script>
   </body>
 </html>

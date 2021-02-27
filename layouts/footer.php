@@ -41,8 +41,8 @@
               <h3 class="footer-heading mb-4">Contacto Info</h3>
               <ul class="list-unstyled">
                 <li class="address">3a Calle Pte, Candelaria de La Frontera</li>
-                <li class="phone"><a href="tel://23923929210">(503) 7698-0896</a></li>
-                <li class="email">obeliskgamer@gmail.com</li>
+                <li class="phone"><a href="https://api.whatsapp.com/send?phone=50364302812&text=Me">(503) 7698-0896</a></li>
+                <li class="email"><a href="mailto:luchetto.hatake@gmail.com">obeliskgamer@gmail.com</a></li>
               </ul>
             </div>
               </form>
