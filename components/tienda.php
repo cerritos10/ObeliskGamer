@@ -54,14 +54,15 @@
 
             <?php
               include('../php/conexion.php');
-              $resultado = $conexion -> query("SELECT * FROM productos INNER JOIN categorias ON productos.id_categoria = categorias.id_categoria")or die($conexion -> error);
+              $resultado = $conexion -> query("SELECT * FROM productos INNER JOIN categorias ON productos.id_categoria = categorias.id_categoria
+              ORDER BY id_producto DESC LIMIT 9")or die($conexion -> error);
               while($fila = mysqli_fetch_array($resultado)){
             ?>
             
               <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up" >
                   <div class="block-4 text-center border-product">
                     <figure class="block-4-image">
-                      <a href="../components/shop-single.php"><img src="../assets/images/<?php echo $fila['imagen'];?>" alt="Image placeholder" class="img-fluid"></a>
+                      <a href="../components/shop-single.php"><img src="../assets/images/<?php echo $fila['imagen'];?>" alt="Image placeholder" class="tamaño-productos"></a>
                     </figure>
                     <div class="block-4-text p-4">
                       <h3><a href="shop-single.php"><?php echo $fila['nombre'];?></a></h3>

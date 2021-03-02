@@ -520,6 +520,10 @@ a {
   .site-blocks-1 .text p:last-child {
     margin-bottom: 0; }
 
+.sites-productos{
+  width: 100px;
+  height: 250px;
+}
 .site-blocks-2 .block-2-item {
   display: block;
   position: relative;
@@ -838,7 +842,8 @@ a {
   background: rgb(46, 45, 45);
 }
 .color_detalle p{
-  color: #fff;
+  color: rgb(185, 180, 180);
+  text-align: justify;
 }
 .tamaño{
   width: 95%;
@@ -851,6 +856,10 @@ a {
 .tamaño-destacado{
   max-width: 100%;
     height: 300px;
+}
+.tamaño-productos{
+  max-width: 100%;
+    height: 200px;
 }
 .comentarios h2{
   color: #fff;

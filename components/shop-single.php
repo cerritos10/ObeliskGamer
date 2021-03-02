@@ -31,10 +31,12 @@
           <div class="col-md-6">
             <img src="../assets/images/razer-v-m.jpg" alt="Image" class=" tamaño-detalle">
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 color_detalle">
             <h2 class="text-black">Rizer Viper Mini</h2>
-            <p class="color_detalle">Nacido para superar los límites de los juegos ultraligeros, el Razer Viper Mini adopta una forma más pequeña que sigue siendo igual de grande en rendimiento. </p>
-            <p class="mb-4 color_detalle">Acortando su longitud y ancho de agarre, hemos trabajado con entusiastas y atletas de deportes electrónicos para perfeccionar su diseño aún más, asegurando que el control absoluto ahora esté en manos de más jugadores, así que tome nuestro mouse para juegos más delgado y liviano hasta ahora.</p>
+            <p>Nacido para superar los límites de los juegos ultraligeros, el Razer Viper Mini adopta una forma más pequeña que sigue siendo igual de grande en rendimiento. 
+            Acortando su longitud y ancho de agarre, hemos trabajado con entusiastas y atletas de deportes electrónicos para perfeccionar su diseño aún más, asegurando que el control absoluto ahora esté en manos de más jugadores, así que tome nuestro mouse para juegos más delgado y liviano hasta ahora.
+            </p>
+            
             <p><strong class="text-primary h4">$50.00</strong></p>
             <div class="mb-5">
               <div class="input-group mb-3" style="max-width: 120px;">
