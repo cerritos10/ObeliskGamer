@@ -233,9 +233,27 @@
             </div>
           </div>
         </div>
+
+        <div class="comentarios">
+                
+          <center><h2>Area de Comentarios</h2></center>
+
+          <form name="form1" method="" action="">
+            <label for="textarea"></label>
+            <center>
+              <p>
+                <textarea class="" name="comentario" placeholder="Escribe tu comentario" id="textarea"></textarea>
+              </p>
+              <p>
+                <input class="boton-comentar" type="button" value="Comentar">
+              </p>
+            </center>
+          </form>
+        </div>
         
       </div>
     </div>
+
     <?php include("../layouts/footer.php"); ?> 
 
     
@@ -251,15 +269,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
   <script src="../js/main.js"></script>
-  <script type="text/javascript">
-  window.addEventListener("load",function(){
-    var template = document.getElementById("multiplicar");               
-                for(var i = 1; i <= 2;i++){
-                  var clonar = template.cloneNode(true);
-                  template.appendChild(clonar)
-                }
-  });
-                
-              </script>
   </body>
 </html>
