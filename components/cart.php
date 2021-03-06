@@ -68,7 +68,7 @@
 
                   <tr>
                     <td class="product-thumbnail">
-                      <img src="../images/cloth_2.jpg" alt="Image" class="img-fluid">
+                      <img src="../assets/images/razer-nari.jpg" alt="Image" class="img-fluid">
                     </td>
                     <td class="product-name">
                       <h2 class="h5 text-black">Polo Shirt</h2>
