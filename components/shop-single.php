@@ -1,3 +1,17 @@
+<?php 
+  include('../php/conexion.php');
+  if(isset($_GET['id'])){
+    $resultado = $conexion ->query("select * from productos where id_producto=".$_GET['id']) or die($conexion -> error);
+    if (mysqli_num_rows($resultado) > 0) {
+      $fila = mysqli_fetch_row($resultado);
+    }else {
+      header("Location: ../components/tienda.php");
+    }
+  }else {
+    header("Location: ./components/tienda.php");
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,15 +43,13 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <img src="../assets/images/razer-v-m.jpg" alt="Image" class=" tamaño-detalle">
+            <img src="../assets/images/<?php echo $fila[4]; ?>" alt="<?php echo $fila[1]; ?>" class=" tamaño-detalle">
           </div>
           <div class="col-md-6 color_detalle">
-            <h2 class="text-black">Rizer Viper Mini</h2>
-            <p>Nacido para superar los límites de los juegos ultraligeros, el Razer Viper Mini adopta una forma más pequeña que sigue siendo igual de grande en rendimiento. 
-            Acortando su longitud y ancho de agarre, hemos trabajado con entusiastas y atletas de deportes electrónicos para perfeccionar su diseño aún más, asegurando que el control absoluto ahora esté en manos de más jugadores, así que tome nuestro mouse para juegos más delgado y liviano hasta ahora.
-            </p>
+            <h2 class="text-black"><?php echo $fila[1]; ?></h2>
+            <p><?php echo $fila[2]; ?></p>
             
-            <p><strong class="text-primary h4">$50.00</strong></p>
+            <p><strong class="text-primary h4">$<?php echo $fila[3]; ?></strong></p>
             <div class="mb-5">
               <div class="input-group mb-3" style="max-width: 120px;">
               <div class="input-group-prepend">
@@ -50,7 +62,7 @@
             </div>
 
             </div>
-            <p><a href="../components/cart.php" class="buy-now btn btn-sm btn-primary">Añadir al carrito</a></p>
+            <p><a href="../components/cart.php?id=<?php echo $fila[0]; ?>" class="buy-now btn btn-sm btn-primary">Añadir al carrito</a></p>
 
           </div>
         </div>

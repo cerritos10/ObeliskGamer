@@ -62,10 +62,11 @@
               <div class="col-sm-6 col-lg-4 mb-4" data-aos="fade-up" >
                   <div class="block-4 text-center border-product">
                     <figure class="block-4-image">
-                      <a href="../components/shop-single.php"><img src="../assets/images/<?php echo $fila['imagen'];?>" alt="Image placeholder" class="tamaño-productos"></a>
+                      <a href="../components/shop-single.php?id=<?php echo $fila['id_producto'];?>">
+                      <img src="../assets/images/<?php echo $fila['imagen'];?>" alt="Image placeholder" class="tamaño-productos"></a>
                     </figure>
                     <div class="block-4-text p-4">
-                      <h3><a href="shop-single.php"><?php echo $fila['nombre'];?></a></h3>
+                      <h3><a href="shop-single.php?id=<?php echo $fila['id_producto'];?>"><?php echo $fila['nombre'];?></a></h3>
                       <p class="mb-0"><?php echo $fila['categoria'];?></p>
                       <p class="text-primary font-weight-bold">$<?php echo $fila['precio'];?></p>
                     </div>
