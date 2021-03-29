@@ -127,7 +127,7 @@
                       </div>
                     </td>
                     <td>$<?php echo $arregloCarrito[$i]['Precio']*$arregloCarrito[$i]['Cantidad'];?></td>
-                    <td><a href="#" class="btn-gradi">X</a></td>
+                    <td><a href="#" class="btn-gradi btnEliminar" data-id="<?php echo $arregloCarrito[$i]['Id']; ?>">X</a></td>
                   </tr>
 
                 <?php }} ?>
@@ -210,6 +210,24 @@
   <script src="../js/aos.js"></script>
 
   <script src="../js/main.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".btnEliminar").click(function(event){
+        event.preventDefault();
+        var id = $(this).data('id');
+        var boton = $(this);
+        $.ajax({
+          method:'POST',
+          url:'../php/eliminarCarrito.php',
+          data:{
+            id:id
+          }
+        }).done(function(respuesta){
+          boton.parent('td').parent('tr').remove();
+        });
+      });
+    });
+  </script>
     
   </body>
 </html>
