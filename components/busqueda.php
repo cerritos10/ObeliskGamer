@@ -66,6 +66,10 @@
                 INNER JOIN categorias ON productos.id_categoria = categorias.id_categoria 
                 WHERE productos.nombre LIKE '%".$_GET['texto']."%' 
                 ORDER BY id_producto ASC LIMIT 9")or die($conexion -> error);
+              
+              if (mysqli_num_rows($resultado) > 0) {
+                
+              
               while($fila = mysqli_fetch_array($resultado)){
             ?>
             
@@ -82,7 +86,10 @@
                     </div>
                   </div>
                </div>
-            <?php } ?>
+            <?php } }
+            else {
+              echo '<h2>Sin resultados</h2>';
+            } ?>
             </div>
             <div class="row" data-aos="fade-up">
               <div class="col-md-12 text-center">
