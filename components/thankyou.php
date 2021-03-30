@@ -1,3 +1,33 @@
+<?php 
+  session_start();
+  include('../php/conexion.php');
+  if (!isset($_SESSION['carrito'])) {
+    header("Location: ./components/tienda.php");
+  }
+  $arreglo = $_SESSION['carrito'];
+  $total =0;
+  $subtotal =0;
+  for ($i=0; $i < count($arreglo); $i++) { 
+    $subtotal += ($arreglo[$i]['Precio'] * $arreglo[$i]['Cantidad']);
+    $total =  number_format(($subtotal * 1.13),2);  
+  }
+  $fecha = date('Y-m-d h:m:s');
+  $conexion -> query("insert into ventas(id_usuario,total,fecha) 
+  values (1,$total,'$fecha')") or die($conexion -> error);
+  $id_venta = $conexion -> insert_id; //asi se obtiene el id del ultimo registro
+
+  for ($i=0; $i < count($arreglo); $i++) { 
+    $conexion -> query("insert into productos_venta (id_venta,id_producto,cantidad,precio,subtotal)
+    values(
+      $id_venta,
+      ".$arreglo[$i]['Id'].",
+      ".$arreglo[$i]['Cantidad'].",
+      ".$arreglo[$i]['Precio'].",
+      ".$arreglo[$i]['Cantidad'] * $arreglo[$i]['Precio']."
+    ) ") or die($conexion -> error); 
+  }
+  unset($_SESSION['carrito']);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,12 +38,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
+    <link rel="stylesheet" href="../fonts/icomoon/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/magnific-popup.css">
     <link rel="stylesheet" href="../css/jquery-ui.css">
     <link rel="stylesheet" href="../css/owl.carousel.min.css">
     <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+
+
     <link rel="stylesheet" href="../css/aos.css">
+
     <link rel="stylesheet" href="../css/style.css">
     
   </head>
@@ -29,7 +65,7 @@
             <span class="icon-check_circle display-3 text-success"></span>
             <h2 class="display-3 text-black">Thank you!</h2>
             <p class="lead mb-5">You order was successfuly completed.</p>
-            <p><a href="shop.html" class="btn btn-sm btn-primary">Back to shop</a></p>
+            <p><a href="shop.php" class="btn btn-sm btn-primary">Back to shop</a></p>
           </div>
         </div>
       </div>

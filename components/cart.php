@@ -103,9 +103,13 @@
                 </thead>
                 <tbody>
                 <?php 
+                  $total = 0;
+                  $subtotal = 0;
                   if (isset($_SESSION['carrito'])) {
                     $arregloCarrito = $_SESSION['carrito'];
                     for ($i = 0; $i < count($arregloCarrito); $i++) { 
+                      $subtotal = $subtotal + ($arregloCarrito[$i]['Precio'] * $arregloCarrito[$i]['Cantidad']);
+                      $total =  number_format(($subtotal * 1.13),2);
                 ?>
                   <tr>
                     <td class="product-thumbnail">
@@ -174,7 +178,7 @@
                     <span class="text-black">Subtotal</span>
                   </div>
                   <div class="col-md-6 text-right">
-                    <strong class="text-black">$230.00</strong>
+                    <strong class="text-black"><?php echo $subtotal ?></strong>
                   </div>
                 </div>
                 <div class="row mb-5">
@@ -182,7 +186,7 @@
                     <span class="text-black">Total</span>
                   </div>
                   <div class="col-md-6 text-right">
-                    <strong class="text-black">$230.00</strong>
+                    <strong class="text-black"><?php echo $total ?></strong>
                   </div>
                 </div>
 
