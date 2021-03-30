@@ -58,29 +58,38 @@
                 </div>
               </div>
 
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Apartment, suite, unit etc. (optional)">
-              </div>
-
               <div class="form-group row">
                 <div class="col-md-6">
                   <label for="c_state_country" class="text-black">State / Country <span class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="c_state_country" name="c_state_country">
+                  <input type="text" class="form-control" id="c_state_country" name="c_city">
                 </div>
                 <div class="col-md-6">
                   <label for="c_postal_zip" class="text-black">Posta / Zip <span class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="c_postal_zip" name="c_postal_zip">
+                  <input type="text" class="form-control" id="c_postal_zip" name="c_postal">
                 </div>
               </div>
 
               <div class="form-group row mb-5">
                 <div class="col-md-6">
                   <label for="c_email_address" class="text-black">Email Address <span class="text-danger">*</span></label>
-                  <input type="text" class="form-control" id="c_email_address" name="c_email_address">
+                  <input type="text" class="form-control" id="c_email_address" name="c_email">
                 </div>
                 <div class="col-md-6">
                   <label for="c_phone" class="text-black">Phone <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="c_phone" name="c_phone" placeholder="Phone Number">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="c_create_account" class="text-black" data-toggle="collapse" href="#create_an_account" role="button" aria-expanded="false" aria-controls="create_an_account"><input type="checkbox" value="1" id="c_create_account"> Create an account?</label>
+                <div class="collapse" id="create_an_account">
+                  <div class="py-2">
+                    <p class="mb-3">Create an account by entering the information below. If you are a returning customer please login at the top of the page.</p>
+                    <div class="form-group">
+                      <label for="c_account_password" class="text-black">Account Password</label>
+                      <input type="email" class="form-control" id="c_account_password" name="c_password" placeholder="">
+                    </div>
+                  </div>
                 </div>
               </div>
 
