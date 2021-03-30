@@ -4,16 +4,16 @@
           <div class="row align-items-center">
 
             <div class="col-6 col-md-4 order-2 order-md-1 site-search-icon text-left">
-              <form action="" class="site-block-top-search">
+              <form action="../components/busqueda.php" class="site-block-top-search" method="GET">
                 <span class="icon icon-search2"></span>
-                <input type="text" class="form-control form-shadow border-0" placeholder="Search">
+                <input type="text" class="form-control form-shadow border-0" placeholder="Search" name="texto">
               </form>
             </div>
 
             <div class="col-12 mb-3 mb-md-0 col-md-4 order-1 order-md-2 text-center">
               <div class="site-logo">
                 <!--<a href="tienda.php" class="js-logo-clone">Mi Tienda</a>-->
-               <a href="../components/index.php"><img  src="../assets/images/logo.png" alt="logo" style="width:85px; height:85px; padding:0px"></a>
+               <a href="../components/tienda.php"><img  src="../assets/images/logo.png" alt="logo" style="width:85px; height:85px; padding:0px"></a>
               </div>
             </div>
 
