@@ -2,7 +2,7 @@
   session_start();
   include('../php/conexion.php');
   if (!isset($_SESSION['carrito'])) {
-    header("Location: ./components/tienda.php");
+    header("Location: ../components/tienda.php");
   }
   $arreglo = $_SESSION['carrito'];
   $total =0;
@@ -11,9 +11,27 @@
     $subtotal += ($arreglo[$i]['Precio'] * $arreglo[$i]['Cantidad']);
     $total =  number_format(($subtotal * 1.13),2);  
   }
+  $password = "";
+  if (isset($_POST['c_password'])) {
+    if ($_POST['c_password']) {
+      $password = $_POST['c_password'];
+    }
+  }
+
+  $conexion -> query("insert into usuarios (nombre,telefono,email,password)
+    values(
+      '".$_POST['c_fname']." ".$_POST['c_lname']."',
+      '".$_POST['c_phone']."',
+      '".$_POST['c_email']."',
+      '".sha1($password)."'
+      )
+  ") or die($conexion -> error);
+
+  $id_usuario = $conexion -> insert_id;
+
   $fecha = date('Y-m-d h:m:s');
-  $conexion -> query("insert into ventas(id_usuario,total,fecha) 
-  values (1,$total,'$fecha')") or die($conexion -> error);
+  $conexion -> query("insert into ventas(id_usuario,total) 
+  values ($id_usuario,$total)") or die($conexion -> error);
   $id_venta = $conexion -> insert_id; //asi se obtiene el id del ultimo registro
 
   for ($i=0; $i < count($arreglo); $i++) { 
@@ -26,6 +44,14 @@
       ".$arreglo[$i]['Cantidad'] * $arreglo[$i]['Precio']."
     ) ") or die($conexion -> error); 
   }
+  $conexion -> query("insert into envios(ciudad,direccion,postal,id_venta) 
+    values(
+      '".$_POST['c_city']."',
+      '".$_POST['c_address']."',
+      '".$_POST['c_postal']."',
+      $id_venta
+    )"
+  )  or die ($conexion -> error);
   unset($_SESSION['carrito']);
 ?>
 <!DOCTYPE html>
