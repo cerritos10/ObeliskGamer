@@ -55,6 +55,7 @@
             <?php
               include('../php/conexion.php');
               $resultado = $conexion -> query("SELECT * FROM productos INNER JOIN categorias ON productos.id_categoria = categorias.id_categoria
+              WHERE inventario > 0
               ORDER BY id_producto DESC LIMIT 9")or die($conexion -> error);
               while($fila = mysqli_fetch_array($resultado)){
             ?>
