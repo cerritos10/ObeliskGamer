@@ -52,11 +52,24 @@
             </div>
             <div class="row mb-5">
 
-            <?php
+              <?php
               include('../php/conexion.php');
-              $resultado = $conexion -> query("SELECT * FROM productos INNER JOIN categorias ON productos.id_categoria = categorias.id_categoria
+              $limite = 9;
+              $totalQuery = $conexion -> query('SELECT COUNT(*) FROM productos') or die ($conexion -> error);
+              $totalProductos = mysqli_fetch_row($totalQuery);
+              $totalBotones = round($totalProductos[0] / $limite);
+              if (isset($_GET['limite'])) {
+                $resultado = $conexion -> query("SELECT * FROM productos INNER JOIN categorias ON productos.id_categoria = categorias.id_categoria
               WHERE inventario > 0
-              ORDER BY id_producto DESC LIMIT 9")or die($conexion -> error);
+              ORDER BY id_producto DESC LIMIT ".$_GET['limite'].", ".$limite)or die($conexion -> error);
+              }
+              else{
+                $resultado = $conexion -> query("SELECT * FROM productos INNER JOIN categorias ON productos.id_categoria = categorias.id_categoria
+              WHERE inventario > 0
+              ORDER BY id_producto DESC LIMIT ".$limite)or die($conexion -> error);
+              }
+
+              
               while($fila = mysqli_fetch_array($resultado)){
             ?>
             
@@ -79,13 +92,25 @@
               <div class="col-md-12 text-center">
                 <div class="site-block-27">
                   <ul>
-                    <li><a href="#">&lt;</a></li>
-                    <li class="active"><span>1</span></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">&gt;</a></li>
+                    
+              <?php
+                if (isset($_GET['limite'])) {
+                  if ($_GET['limite'] > 0) {
+                    echo '<li><a href="tienda.php?limite='.($_GET['limite'] - 9).'">&lt;</a></li>';
+                  }
+                }
+                for($j=0;$j<$totalBotones;$j++){
+                  echo '<li><a href="tienda.php?limite='.($j*9).'">'.($j+1).'</a></li>';
+                }
+                if (isset($_GET['limite'])) {
+                  if ($_GET['limite'] + 9 < $totalBotones * 9) {
+                    echo '<li><a href="tienda.php?limite='.($_GET['limite'] + 9).'">&gt;</a></li>'; 
+                  }
+                }
+                else{
+                  echo '<li><a href="tienda.php?limite=9">&gt;</a></li>';
+                }
+              ?>
                   </ul>
                 </div>
               </div>
