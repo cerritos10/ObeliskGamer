@@ -3,14 +3,19 @@
   if (!isset($_SESSION['carrito'])) {
     header("Location: ../components/tienda.php");
   }
+  $arreglo = $_SESSION['carrito'];
   if (!isset($_SESSION['datos_login'])) {
     header("Location: ../components/login.php");
   }
+  $user = $_SESSION['datos_login'];
+
+  //echo reset($user); obtener el primer elemento de un array.
+  $id_usuario = ($user['id_usuario']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Checkout</title>
+    <title>Check</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -82,7 +87,7 @@
                     </div>
                   </div>
 
-                  <div class="form-group">
+                  <!--<div class="form-group">
                     <label for="c_create_account" class="text-black" data-toggle="collapse" href="#create_an_account" role="button" aria-expanded="false" aria-controls="create_an_account"><input type="checkbox" value="1" id="c_create_account"> Create an account?</label>
                     <div class="collapse" id="create_an_account">
                       <div class="py-2">
@@ -93,7 +98,7 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div>-->
 
                   <div class="form-group">
                     <label for="c_order_notes" class="text-black">Order Notes</label>
@@ -136,7 +141,7 @@
                           $subtotal =0;
                           for ($i=0; $i < count($arreglo); $i++) { 
                             $subtotal += ($arreglo[$i]['Precio'] * $arreglo[$i]['Cantidad']);
-                            $total =  number_format(($subtotal * 1.13),2);                      
+                            $total =  ($subtotal * 1.13);                      
                         ?>
                           <tr>
                             <td><?php echo $arreglo[$i]['Nombre']; ?> <strong class="mx-2">x</strong><?php echo $arreglo[$i]['Cantidad'] ?></td>
@@ -228,7 +233,7 @@
           return actions.order.capture().then(function(details) {
             //console.log(details);
             if (details.status == 'COMPLETED') {
-              location.href="../components/thankyouPaypal.php?metodo=paypal"
+              location.href="../components/thankyou.php?metodo=paypal"
             }
             //alert('Transaction completed by ' + details.payer.name.given_name);
           });

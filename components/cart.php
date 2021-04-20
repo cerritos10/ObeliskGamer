@@ -135,7 +135,7 @@
                       </div>
                     </td>
                       <td class="cant<?php echo $arregloCarrito[$i]['Id']; ?>">
-                    $<?php echo number_format(($arregloCarrito[$i]['Precio']*$arregloCarrito[$i]['Cantidad']),2);?></td>
+                    $<?php echo ($arregloCarrito[$i]['Precio']*$arregloCarrito[$i]['Cantidad']);?></td>
                     <td><a href="#" class="btn-gradi btnEliminar" data-id="<?php echo $arregloCarrito[$i]['Id']; ?>">X</a></td>
                   </tr>
 

@@ -9,7 +9,7 @@
   $subtotal =0;
   for ($i=0; $i < count($arreglo); $i++) { 
     $subtotal += ($arreglo[$i]['Precio'] * $arreglo[$i]['Cantidad']);
-    $total =  number_format(($subtotal * 1.13),2);  
+    $total = ($subtotal * 1.13);  
   }
   $password = "";
   if (isset($_POST['c_password'])) {
@@ -59,17 +59,17 @@ foreach($user as $usr => $idd){
     $conexion -> query("update productos set inventario=inventario-".$arreglo[$i]['Cantidad']." where id_producto=".$arreglo[$i]['Id']."")
     or die($conexion -> error);
   }
-  $conexion -> query("insert into envios(ciudad,direccion,postal,id_venta) 
-    values(
-      '".$_POST['c_city']."',
-      '".$_POST['c_address']."',
-      '".$_POST['c_postal']."',
-      $id_venta
-    )"
-  )  or die ($conexion -> error);
-  if (isset($_GET['metodo'])) {
-    # code...
+  if ($_GET['metodo']=='efectivo') {
+    $conexion -> query("insert into envios(ciudad,direccion,postal,id_venta) 
+      values(
+        '".$_POST['c_city']."',
+        '".$_POST['c_address']."',
+        '".$_POST['c_postal']."',
+        $id_venta
+      )"
+    )  or die ($conexion -> error);
   }
+
   $conexion -> query("insert into pagos(id_venta,metodo) 
     values(
       $id_venta,
