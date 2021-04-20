@@ -18,6 +18,7 @@
     }
   }
 
+  /*
   $conexion -> query("insert into usuarios (nombre,telefono,email,password)
     values(
       '".$_POST['c_fname']." ".$_POST['c_lname']."',
@@ -28,7 +29,18 @@
   ") or die($conexion -> error);
 
   $id_usuario = $conexion -> insert_id;
+*/
+$arreglo = $_SESSION['carrito'];
 
+$user = $_SESSION['datos_login'];
+
+//echo reset($user); obtener el primer elemento de un array.
+$id_usuario = ($user['id_usuario']);
+/*
+foreach($user as $usr => $idd){
+  echo $idd;
+}
+*/
   $fecha = date('Y-m-d h:m:s');
   $conexion -> query("insert into ventas(id_usuario,total) 
   values ($id_usuario,$total)") or die($conexion -> error);
@@ -53,6 +65,15 @@
       '".$_POST['c_address']."',
       '".$_POST['c_postal']."',
       $id_venta
+    )"
+  )  or die ($conexion -> error);
+  if (isset($_GET['metodo'])) {
+    # code...
+  }
+  $conexion -> query("insert into pagos(id_venta,metodo) 
+    values(
+      $id_venta,
+      '".$_GET['metodo']."'
     )"
   )  or die ($conexion -> error);
   unset($_SESSION['carrito']);
@@ -94,7 +115,7 @@
             <span class="icon-check_circle display-3 text-success"></span>
             <h2 class="display-3 text-black">Thank you!</h2>
             <p class="lead mb-5">You order was successfuly completed.</p>
-            <p><a href="shop.php" class="btn btn-sm btn-primary">Back to shop</a></p>
+            <p><a href="../components/tienda.php" class="btn btn-sm btn-primary">Back to shop</a></p>
           </div>
         </div>
       </div>

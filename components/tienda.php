@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (!isset($_SESSION['datos_login'])) {
+    header("Location: ../components/login.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

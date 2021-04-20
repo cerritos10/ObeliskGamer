@@ -3,8 +3,9 @@
   if (!isset($_SESSION['carrito'])) {
     header("Location: ../components/tienda.php");
   }
-  $arreglo = $_SESSION['carrito'];
-
+  if (!isset($_SESSION['datos_login'])) {
+    header("Location: ../components/login.php");
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -41,7 +42,7 @@
               <div class="col-md-6 mb-5 mb-md-0">
                 <h2 class="h3 mb-3 text-black">Billing Details</h2>
                 <div class="p-3 p-lg-5 border">
-                  <div class="form-group row">
+                  <!--<div class="form-group row">
                     <div class="col-md-6">
                       <label for="c_fname" class="text-black">First Name <span class="text-danger">*</span></label>
                       <input type="text" class="form-control" id="c_fname" name="c_fname">
@@ -50,7 +51,7 @@
                       <label for="c_lname" class="text-black">Last Name <span class="text-danger">*</span></label>
                       <input type="text" class="form-control" id="c_lname" name="c_lname">
                     </div>
-                  </div>
+                  </div>-->
 
                   <div class="form-group row">
                     <div class="col-md-12">
@@ -71,10 +72,10 @@
                   </div>
 
                   <div class="form-group row mb-5">
-                    <div class="col-md-6">
+                    <!--<div class="col-md-6">
                       <label for="c_email_address" class="text-black">Email Address <span class="text-danger">*</span></label>
                       <input type="text" class="form-control" id="c_email_address" name="c_email">
-                    </div>
+                    </div>-->
                     <div class="col-md-6">
                       <label for="c_phone" class="text-black">Phone <span class="text-danger">*</span></label>
                       <input type="text" class="form-control" id="c_phone" name="c_phone" placeholder="Phone Number">
