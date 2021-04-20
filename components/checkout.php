@@ -29,10 +29,12 @@
     
   </head>
   <body>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=AWpgQbdr3H4kPDHZPJUUC0wgyO0VP6duNTsazyQf77iiH9ASrvpdQ_MbptJk9yNbH9nlc4HTciEgDgn1"> </script>
   
   <div class="site-wrap">
     <?php include("../layouts/header.php"); ?> 
-    <form action="../components/thankyou.php" method="post">
+    <form action="../components/thankyou.php?metodo=efectivo" method="post">
       <div class="site-section">
         <div class="container">
           <div class="row">
@@ -178,6 +180,7 @@
                           <div class="py-2">
                             <p class="mb-0">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.</p>
                           </div>
+                          <div id="paypal-button-container"></div>
                         </div>
                       </div>
 
@@ -208,5 +211,28 @@
 
   <script src="../js/main.js"></script>
     
+  <script>
+  //CODIGO IMPEMTACION DE PAYPAL
+      paypal.Buttons({
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: '<?php echo $total ?>'
+              }
+            }]
+          });
+        },
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+            //console.log(details);
+            if (details.status == 'COMPLETED') {
+              location.href="../components/thankyouPaypal.php?metodo=paypal"
+            }
+            //alert('Transaction completed by ' + details.payer.name.given_name);
+          });
+        }
+      }).render('#paypal-button-container'); 
+    </script>
   </body>
 </html>
