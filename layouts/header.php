@@ -40,7 +40,7 @@
                       </span>
                     </a>
                   </li> 
-                  <li><a href="../php/cerrarSesion.php"><span class="icon icon-heart-o"></span></a></li>
+                  <li><a href="../php/cerrarSesion.php"><span class="icon-power-off"></span></a></li>
                   <li class="d-inline-block d-md-none ml-md-0"><a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu"></span></a></li>
                 </ul>
               </div> 
